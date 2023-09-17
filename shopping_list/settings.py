@@ -88,7 +88,7 @@ DATABASES = {
 
 if PRODUCTION:
     DATABASES = {
-        "default": { env.db("DATABASE_URL") }
+        "default": env.db("DATABASE_URL")
     }
     DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
